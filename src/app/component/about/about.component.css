@@ -1,0 +1,234 @@
+/* Scroll Snapping Styles */
+
+* {
+	box-sizing: border-box;
+  --link-color: #F8724B;
+  --blue0: rgba(168,179,183, .32);
+  --blue1: #A8B3B7;
+  --blue2: #6A7D8E;
+  --blue3: #225469;
+  --rust: #C96845;
+}
+
+
+h1{
+  text-transform: uppercase; 
+  margin-bottom: 1.5rem;
+}
+a{
+  color: var(--link-color);
+}
+a:hover{
+  color: var(--link-color);
+  font-weight: bold;
+}
+img{
+  border-radius: .35rem;
+  z-index: 2;
+}
+.event-title a{
+  font-weight: bold;
+  font-size: larger;
+}
+.event-title{
+  margin-bottom: 0;
+}
+
+body{
+ background: url('https://vancouver.hakomieducation.org/resources/Pictures/mottled_bg.jpg') repeat fixed center;
+  
+}
+
+section {
+/* 	height: 100vh;
+	scroll-snap-align: start; */
+	position: relative;
+} 
+
+header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: #fff;
+}
+header .logo{
+  width:35%; 
+}
+
+li a {
+  display: block;
+}
+
+.bubble-button{
+  border-radius: 1.5rem;
+  width: 7rem;
+  border: 0;
+  padding: .5rem;
+  margin-top: 1rem;
+  color: #ffffff;
+  background-color: var(--link-color);
+  text-align: center;
+}
+.bubble-button:hover{
+  transition: .5s;
+  background-color: var(--rust);
+}
+
+/* -- BODY START -- */
+section{ 
+  color: #fff;
+  padding: 10rem 0 10rem 0;
+  z-index: 0;
+  margin: 0;
+}
+.text-wrapper{
+  padding: 3rem;
+  width: 100%;
+  border-radius: .35rem;
+}
+.image-wrapper img{
+  width: 100%;
+}
+.image-wrapper{
+  position: relative;
+  margin: 0 auto;
+  z-index: 3;
+}
+.image-backdrop{
+  position: absolute;
+  border-radius: .35rem;
+  z-index: 1;
+}
+
+
+section.intro{
+  background-image:  
+    linear-gradient(to bottom, rgba(168,179,183, .32), rgba(106,125,142,.45));
+  color: var(--blue3);
+}
+section.intro .image-wrapper{
+  width: 60%;
+}
+section.intro .image-backdrop{
+  height: 95%;
+  width: 70%;
+  top: 5rem;
+  left: 5rem;
+  background-color: var(--blue3);
+}
+section.intro .text-wrapper{
+  margin-top: 7rem;
+}
+
+
+section.join-us{
+  background-image:  linear-gradient(
+      rgba(106,125,142,.45), rgba(106,125,142,.80));
+
+/*   background-color: rgba(106,125,142,.45); */
+}
+section.join-us .image-wrapper{
+  width: 100%;
+  margin-top: 3.5rem;
+}
+section.join-us .image-backdrop{
+  height: 90%;
+  width: 80%;
+  top: 0rem;
+  left: 2rem;
+  background-color: var(--blue2);
+}
+section.join-us .text-wrapper{
+  margin-top: 0;
+  background-color: rgba(255,255,255, .3);
+  color: var(--blue3);
+  width: 85%;
+}
+
+section.deep-dive{
+/*   background-color: rgba(106,125,142,.80); */
+    background-image:  linear-gradient(
+      rgba(106,125,142,.80), rgba(106,125,142,.95));
+}
+section.deep-dive .image-wrapper{
+  width: 60%;
+}
+section.deep-dive .image-backdrop{
+  height: 120%;
+  width: 55%;
+  top: -2rem;
+  left: 10.5rem;
+  background-color: var(--rust);
+}
+/* -- BODY END -- */
+
+/* -- FOOTER END -- */
+
+/* 
+
+/*
+
+body {
+  background-color: #141414;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  margin-top: 10%;
+  max-width: 10000px;
+}
+
+.image {
+  height: 120px;
+  width: 200px;
+  padding: 3px;
+  transition: .3s;
+  transition-timing-function: ease-in-out;
+}
+
+.items {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  transition: left .5s;
+  transition-timing-function: ease-in-out;
+  position: fixed;
+}
+
+.image:hover {
+  height: 220px;
+  width: 350px;
+  transition: .3s;
+  transition-timing-function: ease-in-out;
+  z-index: -10;
+}
+
+.button-overlay {
+  z-index: 10;
+  position: absolute;
+  height: 120px;
+  width: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 3em;
+  align-items: center;
+  display: flex;
+  opacity: 0.9;
+  top: 40%;
+  cursor: pointer;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+*/

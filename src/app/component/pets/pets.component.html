@@ -1,0 +1,66 @@
+<h1>Mascotas</h1>
+
+<div class="container-fluid ">
+    
+    <div class="row justify-content-center">
+        <div class="col-md-3" >
+            <div class="card">
+                <div class="card-body">
+                    <div class="text-center">
+                        <h2 class="card-title">Filtrar</h2>
+                    </div>
+                    
+
+                      <br><br>
+                    <h5>Tamaño</h5>
+                      <div   class="btn-group-vertical" role="group" aria-label="Filtrar tamaño">
+                        <label>
+                            <input type="checkbox" name="tamano" value="pequeno"     (change)="onCheckboxChange($event)" > Pequeño
+                        </label>
+                        <label>
+                            <input type="checkbox" name="tamano" value="mediano"   (change)="onCheckboxChange($event)" > Mediano
+                        </label>
+                        <label>
+                            <input type="checkbox" name="tamano" value="grande"  (change)="onCheckboxChange($event)" > Grande
+                        </label>
+                    </div>
+                    
+                    
+                    
+                     
+                     <br><br>
+                 
+    
+                    <div class="mb-3">
+                        <label for="edad-range" class="form-label">Edad</label>
+                        <input type="range" class="form-range" id="edad-range" min="0" max="10" step="1" [(ngModel)]="edad" (input)="updateRangeValue()">
+                        <label>{{ edad }}</label>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="button " class="btn btn-primary  w-50">Filtrar</button>
+                    </div>
+                      
+                    
+                </div>
+                
+
+                
+            </div>
+        
+        </div> 
+        <div class="col-md-8">
+          <div style="overflow-y: scroll; height: 800px;">
+            <div class="card-columns">
+              <app-pet-tarjeta (petSelected)="verPet( $event )"   [pets]="pet"  [i]="i" *ngFor="let pet of pets; let i = index" ></app-pet-tarjeta>
+
+             </div>  
+
+          </div>
+            
+        </div>
+    </div>
+</div>
+
+
+

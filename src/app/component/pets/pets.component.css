@@ -1,0 +1,27 @@
+.styled-checkbox {
+    /* Estilos para hacer los checkboxes más grandes */
+    width: 2em;
+    height: 2em;
+  }
+  
+  .styled-checkbox:checked + .form-check-label:before {
+    /* Estilos para agregar un color y animación cuando el checkbox está seleccionado */
+    content: '\2713';
+    background-color: #27a33e;
+    border-color: #00ff6a;
+    color: white;
+    animation: checkbox-pulse 0.3s linear;
+  }
+  
+  @keyframes checkbox-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  

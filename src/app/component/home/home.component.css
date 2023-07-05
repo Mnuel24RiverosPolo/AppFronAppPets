@@ -1,0 +1,44 @@
+
+
+
+body {
+    background-image: url('../../../assets/img/uuuu.png');
+    width: auto;
+    height: 700px;
+    padding-top: 58px;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color:  white;
+    font-weight: 900;
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+   
+   
+
+ }
+
+  h1 {
+    font-size: 80px;
+    margin-top: 200px;
+    
+  
+  }
+
+  p{
+    font-size: 30px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 24px;
+    background-color: #1acfc9c1;
+    color: rgb(129, 158, 13);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #1a8b8b;
+  }
+  

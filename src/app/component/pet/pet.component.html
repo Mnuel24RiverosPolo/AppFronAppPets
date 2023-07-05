@@ -1,0 +1,133 @@
+
+<div class="container mt-5 mb-5">
+    <div class="row">
+      <div class="col-md-6">
+        <h1 class="text-center">
+          <i class="fas fa-paw"></i>
+          PUPASSURE
+        </h1>
+        <div class="text-center puppy">
+          <img class="img-fluid mb-3" [src]="pet.img" [alt]="pet.nombre"  alt="Puppy">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <header>
+          <h1 class="mb-4">Puppy Information</h1>
+          <div class="mb-4">
+            <label for="pets-name">Name</label>
+            <input id="pets-name" type="text" class="form-control" value="{{ pet.nombre | uppercase }}" readonly>
+          </div>
+          
+          <div class="mb-4">
+            <label for="pets-breed">Edad</label>
+            <input id="pets-breed" type="text" class="form-control" value=" {{ pet.edad  }}" readonly>
+          </div>
+          <div class="mb-4">
+            <label for="pets-birthday">Cumpleaños</label>
+            <input id="pets-birthday" type="text" class="form-control" value="{{pet.cumple}}" readonly>
+          </div>
+          <div class="mb-4">
+            <label for="pet-gender">Genero</label>
+            <input id="pet-gender" type="text" class="form-control" value="{{pet.genero}}" readonly>
+          </div>
+          <div class="mb-4">
+            <label for="pet-spayed">Esterilizado</label>
+            <input id="pet-spayed" type="text" class="form-control" value="{{pet.esterilizado}}" readonly>
+          </div>
+          <div class="mb-4">
+            <label for="pet-weight">Telefono</label>
+            <input id="pet-weight" type="text" class="form-control" value="{{pet.dueno.telefono}}" readonly>
+          </div>
+        </header>
+       
+      </div>
+    </div>
+  </div>
+  
+<!-- <div class="signup-container">
+    <div class="left-container">
+      
+      
+        <img [src]="pet.img" [alt]="pet.nombre" alt="Puppy Image">
+      
+    </div>
+    <div class="right-container">
+      <header>
+        <h1>{{pet.nombre}}</h1>
+        <div class="set">
+          <div class="">
+            <label for="pets-name">Name</label>
+            <label id="pets-name" type="text" >{{ pet.nombre | uppercase }}</label>
+
+          </div>
+          <div class="pets-name">
+            <label for="pets-name">Edad</label>
+            <label id="pets-name" type="text" >{{ pet.edad  }}</label>
+
+          </div>
+        </div>
+        <div class="set">
+          <div class="pets-breed">
+            <label for="pets-breed">Color</label>
+            <label id="pets-breed" type="text" >{{ pet.color  }}</label>
+          </div>
+          <div class="pets-birthday">
+            <label for="pets-birthday">Birthday</label>
+            <label id="pets-birthday" type="text">{{pet.cumple}}</label>
+          </div>
+        </div>
+        <div class="set">
+          <div class="pets-gender">
+            <label for="pet-gender-female">Gender</label>
+            <label for="pet-gender-female">{{pet.genero}}</label>
+            
+          </div>
+          <div class="pets-spayed-neutered">
+            <label for="pet-spayed">Esterilizado</label>
+            <label for="pet-spayed">{{pet.esterilizado}}</label>
+            
+          </div>
+        </div>
+        <div class="set">
+            <div class="pets-gender">
+              <label for="pet-gender-female">Raza</label>
+              <label for="pet-gender-female">{{pet.raza}}</label>
+              
+            </div>
+            <div class="pets-spayed-neutered">
+              <label for="pet-spayed">Telefono</label>
+              <label for="pet-spayed">{{pet.dueno.telefono}}</label>
+              
+            </div>
+          </div>
+        
+      </header>
+       <footer>
+        <div class="set">
+          <button id="back">Back</button>
+          <button id="next">Next</button>
+        </div>
+      </footer>
+    </div>
+  </div>
+   -->
+
+<!-- <h1 class="animated fadeIn fast">{{ pet.nombre | uppercase }}</h1>
+<hr>
+
+<div class="row animated fadeIn fast">
+    <div class="col-md-4">
+        <img [src]="pet.img" [alt]="pet.nombre" class="card-img-top img-fluid">
+        <a [href]="['/pets']" class="btn btn-outline-danger btn-block mt-1">Atras</a>
+    </div>
+    <div class="col-md-8">
+        <h2>{{ pet.nombre}}</h2>
+        <hr>
+        <p>
+             {{ pet.biografia }}
+        </p>
+
+       
+    </div>
+
+</div> -->

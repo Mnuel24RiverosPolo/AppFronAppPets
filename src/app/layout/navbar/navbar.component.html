@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header"  routerLinkActive="active">
+        <a class="navbar-brand" [routerLink]="['home']">
+          <img class="logo"   src="../../../assets/img/iconapp.png" /></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      </div>
+      <div class="navbar navbar-default collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="nav nabvar-nav navbar-center">
+<!--          <li class="nav-item"><a class="nav-link" href="#">Home</a></li> -->
+           <li class="nav-item" routerLinkActive="active" ><a class="nav-link" [routerLink]="['about']" >Nosotros</a></li>
+           <li class="nav-item" routerLinkActive="active"><a class="nav-link" [routerLink]="['pets']">Mascotas</a></li>
+           <li class="nav-item" routerLinkActive="active"><a class="nav-link" href="#deep-dive">Perritos Perdidos</a></li>
+           <li class="nav-item" routerLinkActive="active"><a class="nav-link" href="#contact">Noticias</a></li>
+           <li class="nav-item" routerLinkActive="active"><a class="nav-link" href="#contact">Contactanos</a></li>
+        </ul>
+        <ul class="nav navbar-right">
+          <button type="button" class="bubble-button"  [routerLink]="['login']" >Log In</button>
+        </ul>
+      </div>
+  
+<!--         <button type="button" class="navbar-toggle bubble-button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> 
+          Log In
+      </button>-->
+      
+    </div>
+  </nav>

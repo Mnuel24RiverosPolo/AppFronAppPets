@@ -1,0 +1,46 @@
+<div  class="card card-rounded shadow">
+    <img  src="{{ pets.img }}" class="card-img-top img-rounded   " alt="{{ pets.nombre}}" >
+    <div class="line-color"></div>
+
+    <div class="card-body">
+        <div class="row">
+            <div class="col">
+                <h5 class="card-title">{{ pets.nombre }}</h5>
+        
+                <p class="card-text">{{ pets.biografia }}</p>
+                <div class="row">
+                    <div class="col">
+                        <h5>type</h5>
+                        <h4>Puppy</h4>
+
+                    </div>
+                    <div class="col">
+                        <h5>Tamaño</h5>
+                        <h4>Medium</h4>
+
+                    </div>
+                    <div class="col">
+                        <h5>Weith</h5>
+                        <h4>45 kg</h4>
+                        
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button class="btn btn-outline-primary  w-50 h-40">
+                        <a [routerLink]="['/pet', i]" >Ver Ficha</a>
+                    </button>
+                    
+
+                </div>
+
+            </div>
+
+        </div>
+        
+    </div>
+</div>
+
+              
+                
+                    

@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+/* Scroll Snapping Styles */
+
+* {
+	box-sizing: border-box;
+  --link-color: #F8724B;
+  --blue0: rgba(168,179,183, .32);
+  --blue1: #A8B3B7;
+  --blue2: #6A7D8E;
+  --blue3: #225469;
+  --rust: #C96845;
+}
+html {
+	font-family: 'Ubuntu', sans-serif;
+	scroll-snap-type: mandatory;
+	scroll-snap-points-y: repeat(100vh);
+	scroll-snap-type: y mandatory;
+}
+
+h1{
+  text-transform: uppercase; 
+  margin-bottom: 1.5rem;
+}
+a{
+  color: var(--link-color);
+}
+a:hover{
+  color: var(--link-color);
+  font-weight: bold;
+}
+img{
+  border-radius: .35rem;
+  z-index: 2;
+}
+.event-title a{
+  font-weight: bold;
+  font-size: larger;
+}
+.event-title{
+  margin-bottom: 0;
+}

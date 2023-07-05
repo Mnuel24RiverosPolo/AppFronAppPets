@@ -1,0 +1,130 @@
+
+/* -- FOOTER START -- */
+footer{
+  background-color: var(--blue3);
+  color: #fff;
+  padding: 2rem 1rem;
+}
+footer h2{
+  text-align: center;
+}
+footer p{
+  font-size: small;
+}
+footer .share{
+  text-align: right;
+}
+.social{
+  margin-left: .5rem;
+  font-size: 45px;
+  display: inline-block;
+  color: #ffffff;
+}
+
+
+.wrapper{
+  background-color: rgb(4, 117, 132);
+}
+img{
+  height: 50px;
+}
+
+.social:hover{
+  color: var(--link-color);
+  transition: .5s;
+}
+.social img{
+    max-width: 40px;
+    max-height: 40px;
+}
+
+.statements{
+  margin-top: 4rem;
+}
+.apricot-text{
+  text-align: right;
+}
+/* -- FOOTER END -- */
+
+/* -- RESPONSIVE -- */
+@media only screen and (max-width: 600px) {
+  
+  .text-wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: auto;
+  }
+  button {
+      margin: auto;
+  }
+  nav .bubble-button{
+    width: 5rem;
+  }
+  a.navbar-brand {
+    width: 75%;
+  }
+  
+  .logo{
+    width: 100%;
+  }
+  .nav.nabvar-nav.navbar-center {
+    display: inline-block;
+  }
+  section button {
+      margin: 1rem auto 0 auto;
+  }
+  h1 {
+      text-align: center;
+  }
+  p {
+      text-align: center;
+  }
+  section {
+    padding: 7rem 0;
+    text-align: center;
+  }
+  section.intro .image-wrapper{
+    width:75%;
+    margin-bottom: 1rem;
+  }
+  section.intro .text-wrapper{
+    margin-top: 1rem;
+  }
+  section.intro .image-backdrop {
+    top: 3rem;
+    left: 1.75rem;
+    width: 85%;
+  }
+  section.join-us .image-backdrop {
+    top: -1.5rem;
+    left: 1.75rem;
+    width: 85%;
+    height: 18rem;
+    margin-bottom: 0;
+  }
+  section.join-us .image-wrapper{
+    margin: 0 0 5rem 0;
+  }
+  section.join-us .text-wrapper{
+    margin-top: 0;
+    /*     background-color: rgba(255,255,255,.3);
+    color: var(--blue3); */
+  }
+  section.deep-dive .image-wrapper {
+      width: 85%;
+  }
+  section.deep-dive .image-backdrop {
+      left: 5.5rem;
+  }
+  footer{
+      text-align:center;
+  }
+  footer h1, footer h2, footer h3 {
+      text-align: center;
+      margin-top: 2rem;
+  }
+  footer .share{
+    text-align: center;
+    margin: auto;
+}
+}
