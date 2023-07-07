@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable()
 export class PetsService{
@@ -181,11 +182,25 @@ export class PetsService{
     ];
 
     getPets = () => this.pets;
-    getArtist = (id: any ) => this.pets[id];
+    //getArtist = (id: any ) => this.pets[id];
+
+  //   getQuery( query:string ){
+  //     const url = `http://localhost:3000/pet${ query }`;
+  //     const headers = new HttpHeaders({
+  //         'Authorization': 'Bearer BQDhX8DJNzPhVK1DF9gvxLMjJQtEq8hYUHMcTPb0Z2jPYZ4ixq3TGMjRz5PTirzX3L5fSV6htuWB0rUCrX_gMgTZvJds-28NhPLx9IbtRHHtPna-By4'
+  //     });
+  //     return this.http.get(url, { headers });
+  // }
+    
 
     constructor(){
         console.log('Servicio listo!!!')
     }
+
+//     getArtist(id: string){
+//       return this.getQuery(`artists/${id}`)
+//           .pipe( map( data => data));
+//   }
 }
 
 export  interface Pet {

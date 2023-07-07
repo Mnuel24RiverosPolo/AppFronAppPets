@@ -1,4 +1,5 @@
 
+
 /* -- FOOTER START -- */
 footer{
   background-color: var(--blue3);
@@ -24,6 +25,7 @@ footer .share{
 
 .wrapper{
   background-color: rgb(4, 117, 132);
+  padding-top: 1rem;
 }
 img{
   height: 50px;

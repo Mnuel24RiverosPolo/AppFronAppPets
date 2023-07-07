@@ -1,8 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import * as e from 'express';
-import { Pet, PetsService } from 'src/app/services/pets.services';
+import { Pet } from 'src/app/services/pets.services';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-pets',
@@ -13,14 +14,18 @@ export class PetsComponent {
   
   
 set tamanosSeleccionados(value: string[]) {
+
   this._tamanosSeleccionados = value;
-  this.pets = this._petsService.getPets().filter(pet => {
-    console.log(this.tamanosSeleccionados)
-    // Aquí puedes poner la condición de filtrado que desees.
-    // Por ejemplo, si quieres filtrar por el tamaño "grande":
-    return this.tamanosSeleccionados.includes(pet.tamano);
-  });
-  // Realiza las acciones necesarias con el nuevo valor de tamanosSeleccionados
+
+  this.http.get<Pet[]>('http://localhost:3000/pet').subscribe((data: Pet[]) => {
+        this.pets = data.filter((pet: Pet) => {
+          // Aquí puedes poner la condición de filtrado que desees.
+          // Por ejemplo, si quieres filtrar por el tamaño "grande":
+          return this.tamanosSeleccionados.includes(pet.tamano);
+        });
+      });
+  
+  
   console.log(this._tamanosSeleccionados);
   // ...
 }
@@ -28,7 +33,7 @@ set tamanosSeleccionados(value: string[]) {
 get tamanosSeleccionados(): string[] {
   return this._tamanosSeleccionados;
 }
-private _tamanosSeleccionados: string[] = [];
+private _tamanosSeleccionados: string[] = ['grande', 'mediano', 'pequeno'];
 
   
   
@@ -36,36 +41,22 @@ private _tamanosSeleccionados: string[] = [];
   edad: number = 0;
 
 
-  updateRangeValue() {
-    // No es necesario implementar nada aquí, ya que el valor del rango se actualiza automáticamente en la propiedad `edad`
-  }
-
   pets: Pet[] = [];
 
   @Input() i: number = 0;
 
 
 
-  constructor(private _petsService: PetsService
-    , private router: Router){
-      
-      
-      
-      
-
-    }
+  constructor( private router: Router,  private http: HttpClient){}
   
 
     ngOnInit(): void{
-      
-
-      this.pets = this._petsService.getPets().filter(pet => {
-        console.log(this.tamanosSeleccionados)
-        // Aquí puedes poner la condición de filtrado que desees.
-        // Por ejemplo, si quieres filtrar por el tamaño "grande":
-        return this.tamanosSeleccionados.includes(pet.tamano);
+      this.http.get<Pet[]>('http://localhost:3000/pet').subscribe((data: Pet[]) => {
+        this.pets = data.filter((pet: Pet) => {
+        
+          return this.tamanosSeleccionados.includes(pet.tamano);
+        });
       });
-     
 
     }
     onCheckboxChange(event: Event) {
@@ -84,15 +75,9 @@ private _tamanosSeleccionados: string[] = [];
         }
       }
     }
-    
-
     verPet(  i: any ){
       this.router.navigate(['/pet', i])
     }
-
-    
-    
-    
     
 
 }

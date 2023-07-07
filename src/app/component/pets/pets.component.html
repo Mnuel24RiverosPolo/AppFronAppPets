@@ -9,50 +9,35 @@
                     <div class="text-center">
                         <h2 class="card-title">Filtrar</h2>
                     </div>
-                    
-
-                      <br><br>
+                      
                     <h5>Tamaño</h5>
                       <div   class="btn-group-vertical" role="group" aria-label="Filtrar tamaño">
                         <label>
-                            <input type="checkbox" name="tamano" value="pequeno"     (change)="onCheckboxChange($event)" > Pequeño
+                            <input type="checkbox" name="tamano" value="pequeno" [checked]="true"    (change)="onCheckboxChange($event)" > Pequeño
                         </label>
                         <label>
-                            <input type="checkbox" name="tamano" value="mediano"   (change)="onCheckboxChange($event)" > Mediano
+                            <input type="checkbox" name="tamano" value="mediano" [checked]="true"   (change)="onCheckboxChange($event)" > Mediano
                         </label>
                         <label>
-                            <input type="checkbox" name="tamano" value="grande"  (change)="onCheckboxChange($event)" > Grande
+                            <input type="checkbox" name="tamano" value="grande" [checked]="true"  (change)="onCheckboxChange($event)" > Grande
                         </label>
                     </div>
-                    
-                    
-                    
-                     
-                     <br><br>
-                 
-    
-                    <div class="mb-3">
-                        <label for="edad-range" class="form-label">Edad</label>
-                        <input type="range" class="form-range" id="edad-range" min="0" max="10" step="1" [(ngModel)]="edad" (input)="updateRangeValue()">
-                        <label>{{ edad }}</label>
-                    </div>
-
-                    <div class="text-center">
-                        <button type="button " class="btn btn-primary  w-50">Filtrar</button>
-                    </div>
-                      
                     
                 </div>
-                
 
                 
             </div>
+            <div class="col text-center fixed-button-container">
+                <button class="btn btn-primary rounded-circle  btn-lg " [routerLink]="['/petup']">
+                  <img class="imgupload" src="../../../assets/img/upload-solid.svg" alt="">
+                </button>
+              </div>
         
         </div> 
         <div class="col-md-8">
           <div style="overflow-y: scroll; height: 800px;">
             <div class="card-columns">
-              <app-pet-tarjeta (petSelected)="verPet( $event )"   [pets]="pet"  [i]="i" *ngFor="let pet of pets; let i = index" ></app-pet-tarjeta>
+              <app-pet-tarjeta (petSelected)="verPet( $event )"   [pets]="pet"  *ngFor="let pet of pets;" ></app-pet-tarjeta>
 
              </div>  
 

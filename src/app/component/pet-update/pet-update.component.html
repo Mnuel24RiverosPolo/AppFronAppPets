@@ -1,0 +1,120 @@
+<!-- <div class="container">
+    <form [formGroup]="formulario">
+        <div class="mb-4">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" type="text" class="form-control" formControlName="nombre" readonly>
+        </div>
+        <div class="mb-4">
+          <label for="img">Imagen</label>
+          <input id="img" type="text" class="form-control" formControlName="img" readonly>
+        </div>
+       
+      </form>
+</div> -->
+
+ <div class="container shadow mt-5 mb-5">
+    <div class="row">
+      
+      <div class="col-md-6">
+        <header>
+          <h1 class="mb-4">Ingrese Información A editar</h1>
+          <form [formGroup]="formulario" (ngSubmit)="enviarDatos()">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div>
+                        <label for="nombre">Nombre:</label>
+                        <input class="form-control" type="text" id="nombre" formControlName="nombre" >
+                      </div>
+                      <div>
+                        <label for="cumple">Fecha de Cumpleaños:</label>
+                        <input class="form-control" type="text" id="cumple" formControlName="cumple">
+                      </div>
+                      <div>
+                        <label for="raza">Raza:</label>
+                        <input class="form-control" type="text" id="raza" formControlName="raza">
+                      </div>
+                      <div>
+                        <label for="genero">Sexo:</label>
+                        <input class="form-control" type="text" id="genero" formControlName="genero">
+                      </div>
+                     
+                      <div>
+                        <label for="telefono">Teléfono:</label>
+                        <input class="form-control" type="text" id="telefono" formControlName="telefono">
+                      </div>
+
+                </div>
+                <div class="col-sm-6">
+                    <div>
+                        <label for="img">Imagen URL:</label>
+                        <input type="text" id="img" formControlName="img" class="form-control">
+                      </div>
+
+                    <div>
+                        <label for="edad">Edad:</label>
+                        <input class="form-control" type="number" id="edad" formControlName="edad">
+                      </div>
+                      <div>
+                        <label for="tamano">Tamaño:</label>
+                        <select class="form-control" id="tamano" formControlName="tamano">
+                          <option  value="grande">Grande</option>
+                          <option value="mediano">Mediano</option>
+                          <option value="pequeno">Pequeño</option>
+                        </select>
+                      </div>
+
+                      <div>
+                        <label for="esterilizado">Esterilizado:</label>
+                        <input class="form-control " type="text" id="esterilizado" formControlName="esterilizado">
+                        
+                      </div>
+                      <br>
+                    
+                      <div>
+                        
+                        <div class="row">
+                            
+                            <div class="col">
+                                <label for="vacunado">Vacunado:</label>
+                            </div>
+                            <div class="col">
+                                <input  class="form-control w-25" type="checkbox" id="vacunado" formControlName="vacunado">
+                            </div>
+                            
+                        </div>
+                        
+                      </div>
+
+                  
+                </div>
+              </div>
+
+    
+            <div>
+              <label for="biografia">Biografía:</label>
+              <textarea class="form-control" id="biografia" formControlName="biografia"></textarea>
+            </div>
+            <br>
+            <div class="text-center">
+                <button class="btn btn-primary" type="submit" [disabled]="!formulario.valid">Enviar</button>
+            </div>
+            <br>
+          </form>
+        
+          
+        </header>
+       
+      </div>
+
+      <div class="col-md-6">
+        <h2 class="text-center">
+          <i class="fas fa-paw"></i>
+          Vista previa de la imagen:
+        </h2>
+        <div class="text-center puppy">
+          <img class="img-fluid mb-3" [src]="formulario.value.img"   alt="Puppy">
+        </div>
+        
+      </div>
+    </div>
+  </div> 

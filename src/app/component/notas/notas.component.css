@@ -1,0 +1,13 @@
+.fixed-button-container {
+    height: 100px;
+    position: fixed;
+    bottom: 250px;
+    right: 40px;
+    z-index: 9999; /* Opcional: ajusta el valor según sea necesario */
+  }
+
+  .imgupload {
+    font-size: 120px; /* Ajusta el tamaño del botón según tus necesidades */
+    width: 120px; /* Ajusta el ancho del botón según tus necesidades */
+    height: 120px; /* Ajusta la altura del botón según tus necesidades */
+  }

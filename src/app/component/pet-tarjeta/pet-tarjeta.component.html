@@ -9,26 +9,22 @@
         
                 <p class="card-text">{{ pets.biografia }}</p>
                 <div class="row">
+                   
                     <div class="col">
-                        <h5>type</h5>
-                        <h4>Puppy</h4>
+                        <h4>Tamaño</h4>
+                        <h5>{{pets.tamano}}</h5>
 
                     </div>
                     <div class="col">
-                        <h5>Tamaño</h5>
-                        <h4>Medium</h4>
-
-                    </div>
-                    <div class="col">
-                        <h5>Weith</h5>
-                        <h4>45 kg</h4>
+                        <h4>Edad</h4>
+                        <h5>{{pets.edad}} Años</h5>
                         
                     </div>
                 </div>
 
                 <div class="text-center">
                     <button class="btn btn-outline-primary  w-50 h-40">
-                        <a [routerLink]="['/pet', i]" >Ver Ficha</a>
+                        <a [routerLink]="['/pet', pets._id]" >Ver Ficha</a>
                     </button>
                     
 

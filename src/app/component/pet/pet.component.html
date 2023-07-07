@@ -4,7 +4,7 @@
       <div class="col-md-6">
         <h1 class="text-center">
           <i class="fas fa-paw"></i>
-          PUPASSURE
+          Mascota
         </h1>
         <div class="text-center puppy">
           <img class="img-fluid mb-3" [src]="pet.img" [alt]="pet.nombre"  alt="Puppy">
@@ -12,10 +12,10 @@
       </div>
       <div class="col-md-6">
         <header>
-          <h1 class="mb-4">Puppy Information</h1>
+          <h1 class="mb-4"> Information</h1>
           <div class="mb-4">
             <label for="pets-name">Name</label>
-            <input id="pets-name" type="text" class="form-control" value="{{ pet.nombre | uppercase }}" readonly>
+            <input id="pets-name" type="text" class="form-control" value="{{ pet.nombre  }}" readonly>
           </div>
           
           <div class="mb-4">
@@ -36,13 +36,31 @@
           </div>
           <div class="mb-4">
             <label for="pet-weight">Telefono</label>
-            <input id="pet-weight" type="text" class="form-control" value="{{pet.dueno.telefono}}" readonly>
+            <input id="pet-weight" type="text" class="form-control" value="{{pet.telefono}}" readonly>
           </div>
+          <div class="row">
+            <div class="col">
+              <button class="btn btn-warning"   [routerLink]="['/petupdate', pet._id]" >
+                Editar
+                </button>
+
+            </div>
+            <div class="col">
+              <button class="btn btn-danger"  (click)="eliminar()"  [routerLink]="['/pets']" >
+                Eliminar
+                </button>
+
+            </div>
+          </div>
+          
         </header>
        
       </div>
     </div>
+    
   </div>
+
+  
   
 <!-- <div class="signup-container">
     <div class="left-container">

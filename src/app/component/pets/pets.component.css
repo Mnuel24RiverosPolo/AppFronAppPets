@@ -25,3 +25,20 @@
     }
   }
   
+h1{
+  text-align: center;
+}
+
+.fixed-button-container {
+  height: 300px;
+  position: fixed;
+  right: 650px;
+  bottom: 50px;
+  z-index: 99; /* Opcional: ajusta el valor según sea necesario */
+}
+
+.imgupload {
+  font-size: 120px; /* Ajusta el tamaño del botón según tus necesidades */
+  width: 120px; /* Ajusta el ancho del botón según tus necesidades */
+  height: 120px; /* Ajusta la altura del botón según tus necesidades */
+}

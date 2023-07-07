@@ -1,0 +1,16 @@
+<div class="container  mt-5">
+    <div class="row">
+      
+      <div class="col">
+        <app-nota-tarjeta (notaSelected)="verNota( $event )"  [notas]="nota"   [i]="i" *ngFor="let nota of notas; let i = index"></app-nota-tarjeta>
+        
+        
+      </div>
+      <div class="col text-right fixed-button-container">
+        <button class="btn btn-primary rounded-circle  btn-lg " [routerLink]="['/notaup']">
+          <img class="imgupload" src="../../../assets/img/upload-solid.svg" alt="">
+        </button>
+      </div>
+    </div>
+  </div>
+  

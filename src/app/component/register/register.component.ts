@@ -74,10 +74,12 @@ export class RegisterComponent implements OnInit {
       (response) => {
         console.log(response);
         console.log('Registro exitoso');
+        window.alert('Registro exitoso');
       },
       (error) => {
         console.log(error);
         console.log('Error en el registro');
+        window.alert('Error en el registro');
       }
     );
     console.log(requestBody);

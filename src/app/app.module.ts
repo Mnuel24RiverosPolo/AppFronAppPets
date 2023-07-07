@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthGuard } from './auth.guard';
 //Rutas
 import { APP_ROUTING } from './app.routes';
 
@@ -16,6 +17,13 @@ import { PetTarjetaComponent } from './component/pet-tarjeta/pet-tarjeta.compone
 import { PetComponent } from './component/pet/pet.component';
 import { LoginComponent } from './component/login/login.component';
 import { RegisterComponent } from './component/register/register.component';
+import { NotasComponent } from './component/notas/notas.component';
+import { NotaComponent } from './component/nota/nota.component';
+import { NotaTarjetaComponent } from './component/nota-tarjeta/nota-tarjeta.component';
+import { NotaUploadComponent } from './component/nota-upload/nota-upload.component';
+import { PetUploadComponent } from './component/pet-upload/pet-upload.component';
+import { PetUpdateComponent } from './component/pet-update/pet-update.component';
+
 
 
 @NgModule({
@@ -30,6 +38,12 @@ import { RegisterComponent } from './component/register/register.component';
     PetComponent,
     LoginComponent,
     RegisterComponent,
+    NotasComponent,
+    NotaComponent,
+    NotaTarjetaComponent,
+    NotaUploadComponent,
+    PetUploadComponent,
+    PetUpdateComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +54,8 @@ import { RegisterComponent } from './component/register/register.component';
 
   ],
   providers: [
-    PetsService
+    PetsService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

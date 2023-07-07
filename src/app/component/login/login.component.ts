@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators}  from "@angular/forms"
-import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 
 
 @Component({
@@ -9,11 +11,13 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit{
+  
   angForm: FormGroup = new FormGroup({}) ;
+  token: string =''; 
   
 
 
-  constructor( private fb: FormBuilder, private http: HttpClient){
+  constructor( private router: Router,private fb: FormBuilder, private http: HttpClient){
     this.createForm();
   }
 
@@ -41,16 +45,26 @@ export class LoginComponent implements OnInit{
 
   ngOnInit()  {
   }
+  
   onClickSubmit(formData: any){
     this.http.post('http://localhost:3000/authuser', formData)
       .subscribe(
-        (response) => {
-          // Aquí puedes manejar la respuesta exitosa del backend
+        (response: any) => {
+          // Manejar la respuesta exitosa del backend
+          console.log( response.token);
+  
+          // Acceder al token en la respuesta
+           var rstont = (response)
+           localStorage.setItem('token', response.token)
+  
           console.log('Inicio de sesión exitoso');
+          window.alert('Inicio de sesión exitoso');
+          this.router.navigate(['/pets']);
         },
         (error) => {
           // Aquí puedes manejar el error del backend
           console.log('Error en el inicio de sesión');
+          window.alert('Error en el inicio de sesión');
           console.log(formData)
         }
       );

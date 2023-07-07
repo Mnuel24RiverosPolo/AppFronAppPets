@@ -8,13 +8,12 @@ import { Router } from '@angular/router';
 })
 export class PetTarjetaComponent  {
   @Input() pets: any = {};
-  @Input() i: number=0;
-
-
+  
   constructor(private router: Router){
 
   }
   ngOnInit():void{
+
 
   }
 
