@@ -26,7 +26,7 @@ export class NotasComponent {
   console.log(data); // Imprime los datos en la consola
     })
     
-    //this.notas = this._notasService.getNotas();
+   
     
 
   }

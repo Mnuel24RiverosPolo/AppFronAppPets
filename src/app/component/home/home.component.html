@@ -1,7 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - 3D Carousel Using TweenMax.js &amp; jQuery</title>
+ 
+</head>
+
+
 <body>
-  <h1>Bienvenido a AdoptaTrux</h1>
-  
-  <p>Bienvenido/a a nuestra página de adopción de mascotas rescatadas. Aquí encontrarás adorables compañeros que han sido rescatados.</p>
-  
-  
+<!-- partial:index.partial.html -->
+  <header>
+		<h1>Bienvenido a AdoptaTrux </h1>
+    <p>Bienvenido/a a nuestra página de adopción de mascotas rescatadas. Aquí encontrarás adorables compañeros que han sido rescatados.</p>
+    <a type="button" [routerLink]="['/pets']" class="btn btn-warning">Explorar</a>
+
+		
+	</header>
+	
+	<div id="contentContainer" class="trans3d"> 
+	<section id="carouselContainer" class="trans3d">
+		<figure id="item1" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img class="img-card" src="https://img.freepik.com/foto-gratis/adorable-perro-basenji-marron-blanco-sonriendo-dando-maximo-cinco-aislado-blanco_346278-1657.jpg" alt=""></div></figure>
+		<figure id="item2" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img class="img-card" src="https://www.semana.com/resizer/BbWOtPdojJsOFjiETbxmazqY9pI=/1280x0/smart/filters:format(jpg):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/semana/EDUAMFM2CFCRDE4PVUDTTFNBIE.jpg" alt=""></div></figure>
+		<figure id="item3" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img class="img-card" src="https://elquiddelacuestion.com.ar/wp-content/uploads/2020/03/tips-mascotas-felices.jpg" alt=""></div></figure>
+		<figure id="item4" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img class="img-card" src="https://www.lahuelladewonder.es/wp-content/uploads/2023/12/pintores-adoptar-cachorros-en-adopcion-MADRID-protectora-huella-wonder-300x300.jpg" alt=""></div></figure>
+		<figure id="item5" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img class="img-card" src="https://www.shutterstock.com/image-photo/brown-mutt-dog-isolated-on-600nw-2324241801.jpg" alt=""></div></figure>
+		<figure id="item6" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img class="img-card" src="https://minuevomejoramigo.com/wp-content/uploads/2021/02/gastos-adopcion-canina.jpg" alt=""></div></figure>
+		<figure id="item7" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img class="img-card" src="https://ciudadtrendy.mx/wp-content/uploads/2020/08/5-beneficios-de-adoptar-perro-criollo.jpg" alt=""></div></figure>
+		<figure id="item8" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img class="img-card" src="https://previews.123rf.com/images/kisamarkiza/kisamarkiza2112/kisamarkiza211200027/179016971-perro-con-ojos-tristes-en-refugio-para-adopci%C3%B3n.jpg" alt=""></div></figure>
+		<figure id="item9" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img class="img-card" src="https://www.gabrica.pe/wp-content/uploads/2023/05/2.img-articulos-inter-DI%CC%81A-DE-LA-FAMILIA-Recomendaciones-para-adoptar-a-un-perro-adulto-y-dar-una-segunda-oportunidad-711x311px.jpg" alt=""></div></figure>
+		
+	</section>
+	</div>
+
 </body>
+</html>

@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class PetTarjetaComponent  {
   @Input() pets: any = {};
   
-  constructor(private router: Router){
+  constructor(){
 
   }
   ngOnInit():void{

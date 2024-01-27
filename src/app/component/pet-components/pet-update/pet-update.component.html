@@ -1,9 +1,11 @@
+
+
  <div class="container shadow mt-5 mb-5">
     <div class="row">
       
       <div class="col-md-6">
         <header>
-          <h1 class="mb-4">Ingrese Información</h1>
+          <h1 class="mb-4">Ingrese Información A editar</h1>
           <form [formGroup]="formulario" (ngSubmit)="enviarDatos()">
             <div class="row">
                 <div class="col-sm-6">
@@ -13,7 +15,7 @@
                       </div>
                       <div>
                         <label for="cumple">Fecha de Cumpleaños:</label>
-                        <input class="form-control" type="date" id="cumple" formControlName="cumple">
+                        <input class="form-control" type="text" id="cumple" formControlName="cumple">
                       </div>
                       <div>
                         <label for="raza">Raza:</label>
@@ -52,7 +54,7 @@
                       <div>
                         <label for="esterilizado">Esterilizado:</label>
                         <input class="form-control " type="text" id="esterilizado" formControlName="esterilizado">
-
+                        
                       </div>
                       <br>
                     
@@ -81,14 +83,10 @@
               <textarea class="form-control" id="biografia" formControlName="biografia"></textarea>
             </div>
             <br>
-
-            
             <div class="text-center">
                 <button class="btn btn-primary" type="submit" [disabled]="!formulario.valid">Enviar</button>
             </div>
             <br>
-            
-        
           </form>
         
           
@@ -107,4 +105,4 @@
         
       </div>
     </div>
-  </div>
+  </div> 

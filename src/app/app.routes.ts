@@ -3,16 +3,16 @@ import { HomeComponent  } from './component/home/home.component';
 import { AboutComponent } from './component/about/about.component';
 
 
-import { PetsComponent  } from './component/pets/pets.component';
-import { PetComponent  } from './component/pet/pet.component';
+import { PetsComponent  } from './component/pet-components/pets/pets.component';
+import { PetComponent  } from './component/pet-components/pet/pet.component';
 import { LoginComponent } from './component/login/login.component';
 import { RegisterComponent } from './component/register/register.component';
 import { AuthGuard } from './auth.guard'
-import { NotaComponent } from './component/nota/nota.component';
-import { NotasComponent } from './component/notas/notas.component';
-import { NotaUploadComponent } from './component/nota-upload/nota-upload.component';
-import { PetUploadComponent } from './component/pet-upload/pet-upload.component';
-import { PetUpdateComponent } from './component/pet-update/pet-update.component';
+//import { NotaComponent } from './component/nota/nota.component';
+import { NotasComponent } from './component/nota-components/notas/notas.component';
+import { NotaUploadComponent } from './component/nota-components/nota-upload/nota-upload.component';
+import { PetUploadComponent } from './component/pet-components/pet-upload/pet-upload.component';
+import { PetUpdateComponent } from './component/pet-components/pet-update/pet-update.component';
 
 
 

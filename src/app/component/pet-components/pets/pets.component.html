@@ -21,7 +21,23 @@
                         <label>
                             <input type="checkbox" name="tamano" value="grande" [checked]="true"  (change)="onCheckboxChange($event)" > Grande
                         </label>
-                    </div>
+                        </div>
+
+                        <h5>Sexo</h5>
+                        <div class="btn-group-vertical" role="group" aria-label="Filtrar sexo">
+                          <label>
+                            <input type="radio" name="sexo" value="macho" (change)="onSexoChange('macho')"> Macho
+                          </label>
+                          <label>
+                            <input type="radio" name="sexo" value="hembra" (change)="onSexoChange('hembra')"> Hembra
+                          </label>
+                          <label>
+                            <input type="radio" name="sexo" value="" (change)="onSexoChange('')"> Todos
+                          </label>
+                        </div>
+                
+
+                    
                     
                 </div>
 
@@ -37,7 +53,7 @@
         <div class="col-md-8">
           <div style="overflow-y: scroll; height: 800px;">
             <div class="card-columns">
-              <app-pet-tarjeta (petSelected)="verPet( $event )"   [pets]="pet"  *ngFor="let pet of pets;" ></app-pet-tarjeta>
+              <app-pet-tarjeta   [pets]="pet"  *ngFor="let pet of pets;" ></app-pet-tarjeta>
 
              </div>  
 

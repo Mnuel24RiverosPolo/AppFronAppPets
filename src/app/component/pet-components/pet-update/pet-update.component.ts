@@ -28,7 +28,6 @@ export class PetUpdateComponent implements OnInit {
       tamano: ['', Validators.required],
       vacunado: [false],
       telefono: ['', Validators.required]
-      // Otros campos del formulario
     });
 
   }
@@ -39,18 +38,6 @@ export class PetUpdateComponent implements OnInit {
       console.log(this.petId); // Aquí puedes utilizar el ID como necesites
       this.obtenerDatosPet();
     });
-    
-    // if (this.idEditar) {
-    //   this.http.get(`http://localhost:3000/pet/show${this.petId}`).subscribe(
-    //     (response: any) => {
-    //       const petData = response; // Datos del recurso obtenidos del servidor
-    //       this.formulario.patchValue(petData); // Asignar los datos del recurso al formulario
-    //     },
-    //     error => {
-    //       console.error('Ocurrió un error al obtener los datos del recurso:', error);
-    //     }
-    //   );
-    // }
   }
 
   obtenerDatosPet() {
@@ -84,46 +71,5 @@ export class PetUpdateComponent implements OnInit {
       console.error('Formulario inválido');
     }
   }
-
-  // enviarDatos() {
-  //   if (this.formulario.valid) {
-  //     const formData = this.formulario.value;
-  //     console.log(formData);
-  //     // Realiza la lógica para enviar los datos actualizados al servidor
-  //   } else {
-  //     console.error('Formulario inválido');
-  //   }
-  // }
-
-
-  // enviarDatos() {
-  //   if (this.formulario.valid) {
-  //     const formData = this.formulario.value;
-  //     console.log(formData);
-  //     this.http.put(`http://localhost:3000/pet/update/${this.idEditar}`, formData).subscribe(
-  //       response => {
-  //         console.log('Los datos se enviaron correctamente');
-  //         window.alert('Actualización exitosa');
-  //         this.router.navigate(['/pets']);
-  //         // Realiza las acciones necesarias después de enviar los datos
-  //       },
-  //       error => {
-  //         console.error('Ocurrió un error al enviar los datos:', error);
-  //       }
-  //     );
-  //   } else {
-  //     console.error('Formulario inválido');
-  //   }
-  // }
-
-  // actualizarImagen() {
-  //   const imgURL = this.formulario.value.img;
-  //   const imgElement = document.querySelector('img');
-  
-  //   if (imgElement) {
-  //     imgElement.setAttribute('src', imgURL);
-  //   }
-  // }
-
 
 }
