@@ -34,7 +34,7 @@ export class PetUploadComponent implements OnInit {
     if (this.formulario.valid) {
       const formData = this.formulario.value;
       console.log(formData)
-      this.http.post('http://localhost:3000/pet', formData).subscribe(
+      this.http.post('https://mi-app-mascotas-back.onrender.com/pet', formData).subscribe(
         
         response => {
           console.log('Los datos se enviaron correctamente');

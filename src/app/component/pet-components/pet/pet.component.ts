@@ -32,7 +32,7 @@ export class PetComponent {
   }
   //traePet()
   traePet(id: string){
-    this.http.get(`http://localhost:3000/pet/show/${ id }`).subscribe(
+    this.http.get(`https://mi-app-mascotas-back.onrender.com/pet/show/${ id }`).subscribe(
       (data: any) => {
         this.pet = data;
       },
@@ -44,7 +44,7 @@ export class PetComponent {
   }
   eliminar() {
     console.log(this.petId)
-    this.http.delete(`http://localhost:3000/pet/delete/${this.petId}`).subscribe(
+    this.http.delete(`https://mi-app-mascotas-back.onrender.com/pet/delete/${this.petId}`).subscribe(
       response => {
         console.log('El recurso se eliminó correctamente');
         

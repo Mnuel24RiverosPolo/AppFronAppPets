@@ -41,7 +41,7 @@ export class PetUpdateComponent implements OnInit {
   }
 
   obtenerDatosPet() {
-    this.http.get(`http://localhost:3000/pet/show/${this.petId}`).subscribe(
+    this.http.get(`https://mi-app-mascotas-back.onrender.com/pet/show/${this.petId}`).subscribe(
       (response: any) => {
         this.formulario.patchValue(response);
         this.petData = response; // Almacena los datos del objeto en la propiedad petData
@@ -58,7 +58,7 @@ export class PetUpdateComponent implements OnInit {
       const formData = this.formulario.value;
       console.log(formData);
 
-      this.http.put(`http://localhost:3000/pet/update/${this.petId}`, formData).subscribe(
+      this.http.put(`https://mi-app-mascotas-back.onrender.com/pet/update/${this.petId}`, formData).subscribe(
         response => {
           console.log('Los datos se actualizaron correctamente');
           // Realiza las acciones necesarias después de la actualización
