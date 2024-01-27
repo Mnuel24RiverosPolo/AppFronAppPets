@@ -70,7 +70,7 @@ export class RegisterComponent implements OnInit {
       email: formData.value.correo,
       password: formData.value.password
     };
-    this.http.post('http://localhost:3000/authuser/register', requestBody).subscribe(
+    this.http.post('https://mi-app-mascotas-back.onrender.com/authuser/register', requestBody).subscribe(
       (response) => {
         console.log(response);
         console.log('Registro exitoso');
